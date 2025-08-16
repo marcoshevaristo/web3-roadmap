@@ -2,6 +2,7 @@
   "name": "web3-roadmap",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",
+    "@tanstack/react-query": "^5.85.3",
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
