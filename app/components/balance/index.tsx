@@ -18,45 +18,15 @@ export default function Balance() {
     return `Balance: ${formatBalance(data.value, data.symbol)}`;
   }, [address, data, error, status]);
 
-  const triggerClasses = useMemo(() => {
-    const classes = [
-      'text-gray-700',
-      'bg-gray-300',
-      'py-2',
-      'px-3',
-      'flex',
-      'gap-4',
-      'items-center',
-      'rounded-xl',
-      'transition-translate',
-      'ease-in-out',
-      'duration-300',
-      '-translate-x-15',
-      'cursor-pointer',
-    ];
-    return classes.join(' ');
-  }, []);
-
-  const containerClasses = useMemo(() => {
-    const classes = [
-      'bg-gray-300',
-      'absolute',
-      '-right-85',
-      'top-20',
-      'rounded-xl',
-      'pb-2',
-      'px-2',
-      'transition-translate',
-      'ease-in-out',
-      'duration-300',
-      'hover:-translate-x-85',
-    ];
-    return classes.join(' ');
-  }, []);
-
   return (
-    <Box sx={{ width: 340 }} className={containerClasses}>
-      <Box sx={{ width: 380 }} className={triggerClasses}>
+    <Box
+      sx={{ width: 340 }}
+      className='bg-gray-300 fixed -right-85 top-20 rounded-xl pb-2 px-2 transition-translate ease-in-out duration-300 hover:-translate-x-85'
+    >
+      <Box
+        sx={{ width: 380 }}
+        className='text-gray-700 bg-gray-300 py-2 px-3 flex gap-4 items-center rounded-xl transition-translate ease-in-out duration-300 -translate-x-15 cursor-pointer'
+      >
         <WalletIcon sx={{ fontSize: 32 }} />
         {walletMessage}
       </Box>
